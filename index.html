@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://sdmntprcentralus.oaiusercontent.com/files/00000000-bb34-61f5-80f7-e2f2db3a9efb/raw?se=2025-08-23T02%3A38%3A28Z&sp=r&sv=2024-08-04&sr=b&scid=d525002c-1d86-505a-a03d-e51da36ba9da&skoid=b0fd38cc-3d33-418f-920e-4798de4acdd1&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-22T12%3A15%3A23Z&ske=2025-08-23T12%3A15%3A23Z&sks=b&skv=2024-08-04&sig=altvoyFiE/BKBeKeAmOB0qGXHGGvH/fbsgS9G%2BbkaQQ%3D" type="image/x-icon">
+    <title>Receitas com Charme</title>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2b9eb3">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      #splash-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease-out;
+      }
+      #splash-screen.hide {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .splash-logo {
+        color: #2b9eb3;
+        width: 100px;
+        height: 100px;
+        animation: pulse 1.5s infinite ease-in-out;
+      }
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'sans': ['Poppins', 'sans-serif'],
+            },
+            colors: {
+              'teal': '#2b9eb3',
+              'soft-green': '#85cc9c',
+              'light-green': '#bcd9a0',
+              'pastel-yellow': '#edf79e',
+              'off-white': '#fafad7',
+              'brand': {
+                'primary': '#2b9eb3',
+                'secondary': '#85cc9c',
+                'background': '#f8f9fa',
+                'surface': '#ffffff',
+                'text-primary': '#212529',
+                'text-secondary': '#6c757d',
+              }
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.4s ease-in-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.8.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "@google/genai": "https://esm.sh/@google/genai@^1.15.0",
+    "framer-motion": "https://esm.sh/framer-motion@^11.3.19"
+  }
+}
+</script>
+</head>
+  <body class="bg-brand-background font-sans">
+    <div id="splash-screen">
+      <svg class="splash-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 00-4.425 0"/><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js')
+            .then(registration => {
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            })
+            .catch(err => {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>

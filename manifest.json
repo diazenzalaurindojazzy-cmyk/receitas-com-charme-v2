@@ -1,0 +1,21 @@
+{
+  "short_name": "Receitas cc",
+  "name": "Receitas com Charme",
+  "description": "Um aplicativo de culinária para encontrar, criar e compartilhar receitas práticas e elegantes.",
+  "icons": [
+    {
+      "src": "https://sdmntprcentralus.oaiusercontent.com/files/00000000-bb34-61f5-80f7-e2f2db3a9efb/raw?se=2025-08-23T02%3A38%3A28Z&sp=r&sv=2024-08-04&sr=b&scid=d525002c-1d86-505a-a03d-e51da36ba9da&skoid=b0fd38cc-3d33-418f-920e-4798de4acdd1&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-22T12%3A15%3A23Z&ske=2025-08-23T12%3A15%3A23Z&sks=b&skv=2024-08-04&sig=altvoyFiE/BKBeKeAmOB0qGXHGGvH/fbsgS9G%2BbkaQQ%3D",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://sdmntprcentralus.oaiusercontent.com/files/00000000-bb34-61f5-80f7-e2f2db3a9efb/raw?se=2025-08-23T02%3A38%3A28Z&sp=r&sv=2024-08-04&sr=b&scid=d525002c-1d86-505a-a03d-e51da36ba9da&skoid=b0fd38cc-3d33-418f-920e-4798de4acdd1&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-22T12%3A15%3A23Z&ske=2025-08-23T12%3A15%3A23Z&sks=b&skv=2024-08-04&sig=altvoyFiE/BKBeKeAmOB0qGXHGGvH/fbsgS9G%2BbkaQQ%3D",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#2b9eb3",
+  "background_color": "#f8f9fa"
+}
