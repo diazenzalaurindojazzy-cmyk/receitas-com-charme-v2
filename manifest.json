@@ -14,7 +14,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/receitas-com-charme-v2",
   "display": "standalone",
   "theme_color": "#2b9eb3",
   "background_color": "#f8f9fa"
